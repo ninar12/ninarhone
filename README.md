@@ -4,8 +4,8 @@ Personal site for Nina Rhone. Next.js 15 (App Router) and Tailwind CSS 4, deploy
 
 ## Editing
 
-- **Copy:** almost all text lives in `lib/content.ts`.
-- **Email address:** stored base64-encoded as `emailEncoded` in `lib/content.ts` and decoded in the browser, so it never appears in the page source for scrapers. To change it, run `btoa("you@example.com")` in a browser console and paste the result. The myplantry case study is written directly in `app/work/myplantry/page.tsx`.
+- **Copy:** almost all text lives in `lib/content.ts`. The myplantry case study is written directly in `app/work/myplantry/page.tsx`.
+- **Email address:** stored base64-encoded as `emailEncoded` in `lib/content.ts` and decoded in the browser, so it never appears in the page source for scrapers. To change it, run `btoa("you@example.com")` in a browser console and paste the result.
 - **Resume:** put the PDF at `public/resume.pdf` and set `resumeUrl: "/resume.pdf"` in `lib/content.ts`. Resume links stay hidden until then.
 - **Hand-drawn food drawings:** drop PNG or WebP files into `public/drawings/`. Up to six show under the hero, in filename order. With the folder empty, nothing shows.
 - **Images:** project screenshots are in `public/images/`.
