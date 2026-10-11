@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+import { myplantryJsonLd, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "myplantry case study | Nina Rhone",
   description:
     "How myplantry reads receipts and fridge photos, works out when food expires, and suggests recipes for what needs using first.",
-  alternates: { canonical: "/work/myplantry" },
-};
+  path: "/work/myplantry",
+  image: "/og-myplantry.png",
+  type: "article",
+});
 
 export default function MyplantryCaseStudy() {
   return (
     <article className="mx-auto max-w-6xl px-6 md:px-10">
+      <JsonLd data={myplantryJsonLd} />
       <header className="pt-12 pb-10 md:pt-20">
         <p className="text-[0.9375rem]">
           <Link href="/#work" className="link">

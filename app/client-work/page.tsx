@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { EmailBlock } from "@/components/Email";
 import { clientPage, clients } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: clientPage.title,
   description: clientPage.description,
-  alternates: { canonical: "/client-work" },
-};
+  path: "/client-work",
+});
 
 export default function ClientWorkPage() {
   return (

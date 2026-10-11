@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Drawings } from "@/components/Drawings";
 import { EmailBlock } from "@/components/Email";
 import { EmailLink } from "@/components/ProtectedEmail";
+import { JsonLd } from "@/components/JsonLd";
+import { personJsonLd, websiteJsonLd } from "@/lib/seo";
 import { clients, home, selectedWork, site } from "@/lib/content";
 
 function SectionHeading({ id, children }: { id: string; children: React.ReactNode }) {
@@ -16,6 +18,7 @@ function SectionHeading({ id, children }: { id: string; children: React.ReactNod
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-6 md:px-10">
+      <JsonLd data={[personJsonLd, websiteJsonLd]} />
       {/* Hero: the role in heavy type, the claim in light type at the same size. */}
       <section aria-labelledby="intro" className="pt-14 pb-16 md:pt-24 md:pb-20">
         <h1

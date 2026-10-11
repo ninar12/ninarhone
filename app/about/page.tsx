@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { EmailBlock } from "@/components/Email";
 import { aboutPage, site } from "@/lib/content";
+import { JsonLd } from "@/components/JsonLd";
+import { aboutJsonLd, pageMetadata, personJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: aboutPage.title,
   description: aboutPage.description,
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+  type: "profile",
+});
 
 function H2({ id, children }: { id: string; children: React.ReactNode }) {
   return (
@@ -20,6 +23,7 @@ function H2({ id, children }: { id: string; children: React.ReactNode }) {
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 md:px-10">
+      <JsonLd data={[aboutJsonLd, personJsonLd]} />
       <header className="flex flex-col gap-8 pt-12 pb-12 md:flex-row md:items-end md:justify-between md:pt-20">
         <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] font-extrabold tracking-[-0.035em]">About</h1>
         <Image

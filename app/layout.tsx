@@ -4,27 +4,14 @@ import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { home, site } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: home.title,
-  description: home.description,
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    url: site.url,
-    siteName: site.name,
-    title: home.title,
-    description: home.description,
-    images: [{ url: "/images/nina.webp", width: 772, height: 780, alt: "Nina Rhone" }],
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary",
-    title: home.title,
-    description: home.description,
-    images: ["/images/nina.webp"],
-  },
+  ...pageMetadata({ title: home.title, description: home.description, path: "/" }),
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

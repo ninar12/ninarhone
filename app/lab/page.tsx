@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { labPage } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: labPage.title,
   description: labPage.description,
-  alternates: { canonical: "/lab" },
-};
+  path: "/lab",
+});
 
 export default function LabPage() {
   return (
@@ -24,7 +25,7 @@ export default function LabPage() {
           >
             <Image
               src={e.image.src}
-              alt=""
+              alt={`Screenshot of ${e.name}`}
               width={e.image.width}
               height={e.image.height}
               sizes="(min-width: 768px) 256px, (min-width: 640px) 192px, 100vw"

@@ -9,6 +9,7 @@ Personal site for Nina Rhone. Next.js 15 (App Router) and Tailwind CSS 4, deploy
 - **Resume:** put the PDF at `public/resume.pdf` and set `resumeUrl: "/resume.pdf"` in `lib/content.ts`. Resume links stay hidden until then.
 - **Hand-drawn food drawings:** drop PNG or WebP files into `public/drawings/`. Up to six show under the hero, in filename order. With the folder empty, nothing shows.
 - **Images:** project screenshots are in `public/images/`.
+- **Search and link previews:** page titles, descriptions and preview images are set with `pageMetadata` in `lib/seo.ts`, which also holds the structured data about you. The preview images are `public/og.png` and `public/og-myplantry.png`; the site icon is `app/icon.png`.
 
 ## Pages
 
