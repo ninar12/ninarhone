@@ -1,0 +1,108 @@
+@import "@fontsource-variable/schibsted-grotesk";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #ffffff;
+  --color-ink: #18202e;
+  --color-muted: #545b6a;
+  --color-rule: #e4e6eb;
+  --color-pen: #2742d9;
+  --color-pen-dark: #1b2fa3;
+  --color-wash: #f3f5fc;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-feature-settings: "kern", "liga";
+}
+
+::selection {
+  background: var(--color-pen);
+  color: #fff;
+}
+
+/* One focus style everywhere, visible on every background used here. */
+:focus-visible {
+  outline: 2px solid var(--color-pen);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Text links inside running copy. */
+.link {
+  color: var(--color-pen);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.link:hover {
+  color: var(--color-pen-dark);
+  text-decoration-thickness: 2px;
+}
+
+/* Long-form writing: the case study. */
+.article {
+  max-width: 40rem;
+}
+.article h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+.article p {
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+}
+.article ul,
+.article ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+.article ul {
+  list-style: disc;
+}
+.article ol {
+  list-style: decimal;
+}
+.article li {
+  margin-bottom: 0.6rem;
+  padding-left: 0.25rem;
+}
+.article li::marker {
+  color: var(--color-muted);
+}
+.article strong {
+  font-weight: 650;
+}
+.article code {
+  font-size: 0.92em;
+  background: var(--color-wash);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
