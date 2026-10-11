@@ -22,7 +22,7 @@ export const home = {
   headlineRole: "Applied AI architect.",
   headlineClaim: "I take AI systems from prototype to production.",
   subhead:
-    "At GUESS I build AI systems for product search and recommendations, and help roll out AI tools across the company. Before that: machine learning as a data analyst, full-stack engineering, and client websites. MIT, Computation and Cognition (joint computer science and neuroscience).",
+    "I like work where technology and creativity meet to solve a real problem. At GUESS, I helped start the AI program and build AI tools with teams from HR and Payroll to e-commerce. Before that: machine learning as a data analyst, full-stack engineering, and client websites. MIT, Computation and Cognition (joint computer science and neuroscience).",
   facts: [
     "Founding member of the GUESS Global AI Office",
     "Helped roll out AI tools now used by 1,000+ employees",
