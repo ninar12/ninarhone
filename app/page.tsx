@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Drawings } from "@/components/Drawings";
 import { EmailBlock } from "@/components/Email";
+import { EmailLink } from "@/components/ProtectedEmail";
 import { clients, home, selectedWork, site } from "@/lib/content";
 
 function SectionHeading({ id, children }: { id: string; children: React.ReactNode }) {
@@ -33,9 +34,7 @@ export default function HomePage() {
           >
             See the work
           </a>
-          <a href={`mailto:${site.email}`} className="link text-[1rem] font-semibold">
-            Email me
-          </a>
+          <EmailLink className="link text-[1rem] font-semibold">Email me</EmailLink>
           {site.resumeUrl ? (
             <a href={site.resumeUrl} className="link text-[1rem] font-semibold">
               Resume (PDF)
@@ -160,9 +159,7 @@ export default function HomePage() {
         </table>
         <p className="border-t border-rule pt-6">
           {home.clientClosing}{" "}
-          <a href={`mailto:${site.email}`} className="link font-semibold">
-            Email me
-          </a>
+          <EmailLink className="link font-semibold">Email me</EmailLink>
           , or{" "}
           <Link href="/client-work" className="link font-semibold">
             see how a project works

@@ -3,7 +3,8 @@
 export const site = {
   name: "Nina Rhone",
   url: "https://ninarhone.com",
-  email: "ninajr11@icloud.com",
+  // Base64 of the contact address, decoded in the browser. Change it with: btoa("you@example.com")
+  emailEncoded: "bmluYWpyMTFAaWNsb3VkLmNvbQ==",
   // Set to "/resume.pdf" after adding the file to /public. While null, resume links are hidden.
   resumeUrl: null as string | null,
   links: [
