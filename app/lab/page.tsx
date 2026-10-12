@@ -29,7 +29,7 @@ export default function LabPage() {
               width={e.image.width}
               height={e.image.height}
               sizes="(min-width: 768px) 256px, (min-width: 640px) 192px, 100vw"
-              className="aspect-[4/3] w-full rounded-md border border-rule object-cover object-top"
+              className="aspect-[4/3] w-full rounded-xl border border-rule object-cover object-top"
             />
             <div className="max-w-[40rem]">
               <h2 className="text-[1.25rem] leading-snug font-bold tracking-[-0.01em]">

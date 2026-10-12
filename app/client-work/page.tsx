@@ -50,7 +50,7 @@ export default function ClientWorkPage() {
                 width={c.image.width}
                 height={c.image.height}
                 sizes="(min-width: 768px) 45vw, 100vw"
-                className="w-full rounded-lg border border-rule"
+                className="w-full rounded-2xl border border-rule"
               />
               <div>
                 <h3 className="text-[1.5rem] leading-tight font-bold tracking-[-0.015em]">

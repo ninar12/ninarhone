@@ -14,21 +14,24 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="mx-auto flex max-w-6xl flex-wrap items-baseline justify-between gap-x-8 gap-y-3 px-6 pt-7 pb-4 md:px-10 md:pt-9">
+    <header className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 pt-7 pb-4 md:px-10 md:pt-9">
       <Link href="/" className="text-[1.0625rem] font-bold tracking-[-0.01em] text-ink hover:text-pen">
         Nina Rhone
       </Link>
       <nav aria-label="Main">
-        <ul className="flex flex-wrap gap-x-6 gap-y-1 text-[0.9375rem]">
+        <ul className="flex flex-wrap items-center gap-x-6 gap-y-1 text-[0.9375rem]">
           {nav.map((item) => {
             const current = !item.href.includes("#") && pathname.startsWith(item.href);
+            const isContact = item.href === "/#contact";
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   aria-current={current ? "page" : undefined}
                   className={
-                    current
+                    isContact
+                      ? "rounded-full border border-ink/20 px-4 py-1.5 text-ink transition-colors hover:border-ink"
+                      : current
                       ? "text-ink underline decoration-pen decoration-2 underline-offset-[0.35em]"
                       : "text-muted hover:text-ink"
                   }

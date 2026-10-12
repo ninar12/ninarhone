@@ -45,7 +45,7 @@ export default function MyplantryCaseStudy() {
         height={625}
         priority
         sizes="(min-width: 1152px) 1072px, 100vw"
-        className="w-full rounded-lg border border-rule"
+        className="w-full rounded-2xl border border-rule"
       />
 
       <div className="article mt-4">
